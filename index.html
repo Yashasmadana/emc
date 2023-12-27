@@ -13,12 +13,17 @@
 <body>
 
     <header>
-        
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Login</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <!-- The "bars" icon for the menu -->
+            <a href="#" id="menu-icon"><i class="fas fa-bars"></i></a>
+            
+            <!-- Navigation links (initially hidden on small screens) -->
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Login</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -53,6 +58,12 @@
     </footer>
 
     <script>
+        
+        // JavaScript to toggle the visibility of navigation links
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
         // You can add dynamic content loading or interactions using JavaScript here
         // For example, fetching data from an API and updating the content dynamically.
     </script>
